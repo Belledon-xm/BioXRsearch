@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voraqua</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif; 
+        color: white; 
+    }
+    .main-container {
+        width: 60vw;          
+        max-width: 1200px;    
+        margin: 40px auto;    
+        background: rgba(255,255,255,0.65); /* More opaque for better readability */
+        padding: 32px;       
+        box-sizing: border-box;
+        border-radius: 12px;  
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08); 
+        backdrop-filter: blur(8px); /* Adds a blur effect to the background */
+        -webkit-backdrop-filter: blur(8px); /* For Safari support */
+    }
+    @font-face {
+        font-family: 'Lucidity';
+        src: url('fonts/Lucidity.ttf') format('truetype');
+    }
+
+    .main-container h1 {
+        font-family: 'Lucidty';
+        text-align: center;
+        margin-top: 0;
+        font-size: 3em;
+        color: black;
+    }
+    .main-container hr {
+        border: 2px solid black;
+        height: 1px;
+        background: black;
+        margin: 20px 0;
+    }
+    .main-container p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: black; 
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+        }
+    .grid h2 {
+        grid-column: span 6;
+        font-size: 1.5em;
+        color: #333;
+    }
+    .card {
+        border: 2px solid #333;      
+        border-radius: 10px;         
+        background: rgba(255,255,255,0.3);          
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10); 
+        overflow: hidden;            
+        padding: 16px; /* Add padding to keep text away from the border */
+   }
+   .card p{
+    color:black;
+   }
+   .card,
+    .card * {
+        color: #111 !important;
+    }
+    .card-body {
+        padding: 0; 
+    }
+
+    .list-group {
+        margin: 0 -16px; 
+    }
+    .story-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .story-row p {
+      margin: 0;
+      color: #333;
+      font-size: 1.1em;
+    }
+    .body-bg-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+        .overlay {
+      width: 100%;
+      margin: 5% auto;
+    }
+  </style>
+</head>
+<body>
+    <a href="Index.html" style="position: absolute; top: 20px; left: 20px; font-size: 2rem; color: inherit; text-decoration: none;">
+        <i class="fas fa-home"></i>
+    </a>
+    
+    <video autoplay muted loop playsinline class="body-bg-video">
+        <source src="pink-nebula-moewalls-com.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="main-container">
+        <h1>Golvaris</h1>
+        <p>Made by Albix,Galedo,Caranguian</p>
+        <hr>
+     <div class="grid text-center">
+        <div class="g-col-6" style="grid-column: 1 / 7; text-align: left;">
+            <h2>Introduction</h2>
+            <p style="color: black ; text-align: left;">The name Golvaris comes from "Golgi," a cell organelle, and "Varis," meaning "swift deliverer."
+Golvaris stands for "The Swift Deliverer of Life's Power," as he organizes, strengthens, and
+sends the energy that keeps the body alive. While Vesphor, his wand, is inspired by the words
+"vesicle" and "phoros" (Greek for "bearer"). It represents the tool that carries and channels the
+powerful energy Golvaris controls, enabling him to protect and energize.
+            </p>
+        </div>
+        <div class="g-col-6" style="grid-column: 10 / 13; justify-self: end;">
+            <div class="card" style="width: 18rem;">
+                <img src="download (5).png" class="card-img-top" alt="Varaqua Image">
+                <hr>
+                <div class="card-body">
+                    <h5 class="card-title">Golvaris</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+         <div class="overlay">
+    <h1>Golgi Aparatus</h1>
+    <p>
+The Golgi apparatus, alternatively called the Golgi complex or Golgi body, is a
+membrane-bound organelle present in almost all eukaryotic cells. The Golgi apparatus is
+an essential center of processing and delivery, commonly described as the "post office"
+of the cell. Proteins and lipids produced in the endoplasmic reticulum (ER) are delivered
+to the Golgi apparatus to be processed, modified, and sorted further. Following these
+steps, the altered biomolecules are then packaged in vesicles and shipped to their
+destinations, either inside the cell, like lysosomes and the plasma membrane, or outside
+the cell by secretion (Cooper, 2000). This efficient transport system provides each
+molecule an opportunity to get to the correct place at the right time for the smooth
+regulation of cellular activity.    </p>
+    <br>
+    <br>
+    <p>The Golgi apparatus is made up structurally of a stack of flattened, membranebound sacs referred to as the cisternae. The cisternae are usually arranged in three
+distinct functional areas, each with a specific role in the transport and processing of
+proteins and lipids. The most peripheral region, referred to as the cis Golgi network (CGN),
+8 of 13
+is situated nearest the endoplasmic reticulum. It also acts as the entry point, accepting
+newly made proteins and lipids to undergo further processing. The second zone is the
+medial Golgi, which is located in the middle of the stack. Most enzymatic modification
+occurs, for example, by adding sugar groups to create glycoproteins. Lastly, the transGolgi network (TGN) acts as the site of exit for the Golgi apparatus. This area is
+accountable for sorting and packaging processed molecules into vesicles that are
+delivered to their destination sites, for example, lysosomes, the plasma membrane, or the
+extracellular environment (Kienzle and von Blume, 2014).
+</p>
+<br>
+    <p>The Golgi apparatus helps maintain cellular homeostasis by performing one or
+multiple exact and interconnected processes. One primary function is still the alteration
+of previously described biomolecules termed proteins and lipids. After their synthesis in
+the endoplasmic reticulum, these biomolecules are moved or shipped to the Golgi
+apparatus, which is a highly advanced machinery whereby critical chemical changes are
+done. Modifications that occur include glycosylation, phosphorylation, and sulfation,
+ensuring that proteins and lipids achieve a target structure and function that is prerequired before being taken to their final cellular destinations (Cooper, 2000). The Golgi
+also plays a central role in sorting and trafficking. It parcels the processed proteins into
+vesicles and accurately targets them to specific areas such as lysosomes, plasma
+membranes, or even the extracellular environment. This system works precisely so that
+every protein or lipid gets to where it needs to go, thus ensuring the circulation and
+constancy of cellular activities (Kienzle and von Blume, 2014).
+
+</p>
+</div>
+        <br>
+        <br>
+        <br>
+        <div class="overlay">
+    <h1>Lore</h1>
+    <p>
+Golvaris wears shining armor that reflects both his inner strength and the purity of
+his mission. Crafted from enchanted pink and gold metals, his armor emanates a soft, yet
+radiant glow that symbolizes the balance between power and kindness. His chestplate is
+adorned with a glowing energy core, an iridescent orb that pulses with vibrant energy.
+This core represents the life force Golvaris is sworn to protect, a constant reminder of his
+sacred duty to preserve harmony and vitality in all living things. Golvaris is a being of
+unwavering honor and kindness, a protector who believes in the sanctity of life. His
+mission is not only to fight but to maintain harmony. Despite the tremendous power he
+wields, Golvaris is not driven by conquest but by a desire to keep balance intact. He is a
+calm, thoughtful individual who values peace but is always ready to fight when necessary
+to defend those who cannot protect themselves. His compassion and wisdom make him
+an inspirational figure to those around him.    </p>
+<br>    <p>ABOUT VESPHOR (THE WAND):
+Vesphor was crafted by Camillo, Golvis’s father and the legendary founder of the
+Golgi Apparatus. Camillo, known for his unmatched knowledge of cellular life, built
+Vesphor using the purest energy from the heart of the cell. He designed it to help Golvis
+control, modify, and deliver vital molecules across the battlefield, much like the Golgi
+apparatus organizes and ships proteins within the cell. Passed down from father to son,
+Vesphor is more than a weapon. It is a symbol of purpose. With every vesicle Golvis
+summons and every pathway he opens, he carries on Camillo’s dream: a world where
+every cell, every ally, and every structure work together in perfect harmony. </p>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="overlay">
+            <h1>Superpower</h1>
+        </div>
+        <section style="display: flex; align-items: center;">
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+                <p style="font-size: 1.2em; color: #333; text-align: center; max-width: 600px;">
+                Vesicle Burst
+Golvis uses his wand, Vesphor, to create a glowing orb filled with life energy. He
+throws it at an enemy, and when it hits, it explodes in a burst of energy, dealing 250
+(+80% Total Magic Power) Magic Damage and slowing enemies by 40% for 2 seconds.
+If the orb hits an enemy hero directly, it bounces to a nearby target, dealing 30% less
+damage but still applying the slow effect. This skill is inspired by the Golgi apparatus’s
+natural ability to send vesicles across the cell, turning it into a deadly attack.
+
+            </div>
+            <div style="flex: 1; display: flex; justify-content: center;">
+                <img src="https://i.redd.it/spirit-bomb-vs-hollow-purple-who-takes-the-win-in-surviving-v0-wy82vx9ykjid1.jpg?width=576&format=pjpg&auto=webp&s=2949f0bbd16e47b7a34d4c564395a1dd81082eb1" alt="Eukaryotic Cell" style="max-width: 100%; height: 200px;">
+            </div>
+        </section> 
+        <br>
+        <section style="display: flex; align-items: center;">
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+                <p style="font-size: 1.2em; color: #333; text-align: center; max-width: 600px;">
+               Secret Pathway
+Golvis taps into Vesphor’s hidden power to open a secret portal at a chosen
+location, allowing allies to teleport up to 6 meters in a targeted direction. The shimmering
+portal stays open for 5 seconds and can be used by up to 3 teammates before it
+11 of 13
+disappears. Those who go through it gain 10% bonus movement speed for 3 seconds,
+making it perfect for quick escapes or surprise attacks. This skill is inspired by the cell’s
+transport pathways, changing the battlefield by providing escape routes and ambush
+opportunities when least expected.
+            </div>
+            <div style="flex: 1; display: flex; justify-content: center;">
+                <img src="data:image/jpeg;base64,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 " alt="Eukaryotic Cell" style="max-width: 100%; height: 200px;">
+            </div>
+        </section>  
+        <br>
+        <section style="display: flex; align-items: center;">
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+                <p style="font-size: 1.2em; color: #333; text-align: center; max-width: 600px;">
+               Final Delivery (Ultimate)
+Golvis calls upon the full power of the cellular realm, raising Vesphor to summon
+a storm of vesicle missiles. These glowing spheres rain down over a wide area for 5
+seconds, each impact dealing 200 (+60% Total Magic Power) Magic Damage. Enemies
+hit by three or more missiles are stunned for 1.5 seconds, making them easy targets for
+follow-up attacks. Allies within the storm also gain a 10% Shield based on their max HP,
+as Golvis’ vesicles protect them as much as they attack. This ability is inspired by the
+Golgi apparatus’s ability to send out massive deliveries, providing a powerful and
+coordinated defense when needed
+   
+            </div>
+            <div style="flex: 1; display: flex; justify-content: center;">
+                <img src="https://static.wikia.nocookie.net/mobile-legends/images/b/b2/Bennett%27s_Rage.png/revision/latest?cb=20210905120446" alt="Eukaryotic Cell" style="max-width: 100%; height: 200px;">
+            </div>
+        </section>  
+        <br>
+        <br>
+        <div class="overlay">
+    <h1>Weakness</h1>
+    <p>Weaknesses Include:
+<br>
+Wrong Pathway
+The Secret Pathway ability is an important escape tool for Golvaris, allowing him
+to get away from danger or chase after a fleeing enemy. However, if Golvaris is stunned,
+silenced, or interrupted while creating the portal, the rift fails and disappears. This failure
+wastes valuable time and energy, leaving Golvaris vulnerable and unable to escape or
+pursue. This risk is especially dangerous in high-stakes combat, where every second
+counts between life and death.
+<br><br><br>
+Overload Weakness
+Vesphor is a powerful tool, but it needs careful control. If Golvaris uses the wand
+too quickly or too many times in a row, it overheats. This causes a critical weakness.
+When Vesphor overheats, all of Golvaris’ abilities take longer to recharge, making him
+slower to react to threats. This can leave him open to attacks, as his power is temporarily
+weakened, and his usual fast movements become slow. Enemies can take advantage of
+this moment of weakness to strike.<br><br><br>
+Low Defense
+Golvaris is great in a support role, but he's not built for direct combat. His armor
+looks impressive but isn’t designed for heavy defense. Because of this, he has less health
+and armor than other, tougher warriors. If Golvaris is caught without backup, especially
+when his magical abilities are useless (due to silence or disarmament), his lack of physical
+defense can be his downfall. Although he can use energy to protect himself for a short
+time, his low durability makes him an easy target for enemies who can exploit his
+weakness.   <br><br>     <br>
+        <br>
+        <br>
+        <div class="overlay">
+            <h1>References</h1>
+            <p>National Human Genome Research Institute. (n.d.). Vacuole. Genome.gov. https://www.genome.gov/genetics-glossary/Vacuole 
+
+ 
+<br><br>
+Helmenstine, A. (2025, March 25). Organelles - Definition, list, and Functions. Science Notes
+and Projects. https://sciencenotes.org/organelles-definition-list-andfunctions/#google_vignette
+ 
+<br><br>
+Admin. (2024, July 2). Cell Organelles - Types, Structure and their Functions. BYJUS.
+https://byjus.com/biology/cell-organelles/
+ 
+<br><br>
+Sapkota, A. (2025, April 9). Cell Organelles: Structures, Functions & Detailed Diagrams.
+Microbe Notes. https://microbenotes.com/cell-organelles/
+ <br><br>
+
+Hua, Z., & Graham, T. R. (2000–2013). The Golgi apparatus. In Madame Curie Bioscience
+Database. Landes Bioscience.
+https://www.ncbi.nlm.nih.gov/books/NBK6268/?fbclid=IwY2xjawJzz_ZleHRuA2FlbQIxMAA
+BHoC64H558p2gIO5hXuKId8-
+7eW9vw56O33SWMGZ0HdMusBmPbdJdVHn42U65_aem_Ki3tA_AsyC4SQHbqYkYog#:~:text=The%20three%20primary%20functions%20of,the%20organelle%20reflec
+ts%20these%20functions<br><br>
+ 
+
+Keenley, W. (2019). Microbiology: Canadian edition. eCampusOntario.
+https://opentextbc.ca/biology/chapter/3-3-eukaryotic-cells/
+
+<br><br>
+
+Alberts, B., Johnson, A., Lewis, J., Raff, M., Roberts, K., & Walter, P. (2002). The Golgi
+Apparatus. In Molecular Biology of the Cell (4th ed.). Garland Science.
+https://www.ncbi.nlm.nih.gov/books/NB
+ <br><br>
+
+Wang, Y., & Seemann, J. (2022). The Golgi apparatus and its next-door neighbors. Frontiers
+in Cell and Developmental Biology, 10, 884360. https://doi.org/10.3389/fcell.2022.884360 
+ <br><br>
+
+Boncompain, G., & Pérez, F. (2013). The many faces of Golgi trafficking: COPI vesicles,
+cisternal progression and tubular carriers. Nature Reviews Molecular Cell Biology, 14(4),
+221–232. https://doi.org/10.1038/nrm3528<br><br>
+ 
+
+Cooper, G. M. (2000). The Golgi apparatus. In The Cell: A Molecular Approach (2nd ed.).
+Sunderland (MA): Sinauer Associates. https://www.ncbi.nlm.nih.gov/books/NBK9838/<br><br>
+ 
+
+Gonatas, N. K., Stieber, A., & Gonatas, J. O. (2006). The involvement of the Golgi apparatus
+in disease. Biochimica et Biophysica Acta (BBA) - Molecular Cell Research, 1744(3), 280–
+289. https://doi.org/10.1016/j.bbamcr.2005.10.004<br><br>
+Kienzle, C., & von Blume, J. (2014). Secretory cargo sorting at the trans-Golgi network.
+Trends in Cell Biology, 24(10), 584–593. https://doi.org/10.1016/j.tcb.2014.05.002
+<br><br>
+ 
+
+Parashuraman, S., & D'Angelo, G. (2019). Golgi pH, ion and redox homeostasis: How much
+do they really matter? Frontiers in Cell and Developmental Biology, 7, 93.
+https://doi.org/10.3389/fcell.2019.00093
+<br><br>
+ 
+
+OpenStax. (2018). Biology 2e. OpenStax. https://openstax.org/books/biology-2e/pages/23-
+1-eukaryotic-origins<br><br>
+ 
+
+ </p>
+        </div>
+    </div>
+</body>
+</html>

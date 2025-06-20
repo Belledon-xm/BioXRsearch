@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voraqua</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif; 
+        color: white; 
+    }
+    .main-container {
+        width: 90vw;          
+        max-width: 1200px;    
+        margin: 40px auto;    
+        background: rgba(255,255,255,0.65); /* More opaque for better readability */
+        padding: 32px;       
+        box-sizing: border-box;
+        border-radius: 12px;  
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08); 
+        backdrop-filter: blur(8px); /* Adds a blur effect to the background */
+        -webkit-backdrop-filter: blur(8px); /* For Safari support */
+    }
+    @font-face {
+        font-family: 'Lucidity';
+        src: url('fonts/Lucidity.ttf') format('truetype');
+    }
+
+    .main-container h1 {
+        font-family: 'Lucidty';
+        text-align: center;
+        margin-top: 0;
+        font-size: 3em;
+        color: black;
+    }
+    .main-container hr {
+        border: 2px solid black;
+        height: 1px;
+        background: black;
+        margin: 20px 0;
+    }
+    .main-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin-bottom: 20px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+        }
+    .grid h2 {
+        grid-column: span 6;
+        font-size: 1.5em;
+        color: #333;
+    }
+    .card {
+        border: 2px solid #333;      
+        border-radius: 10px;         
+        background: rgba(255,255,255,0.3);          
+        overflow: hidden;            
+        padding: 16px; /* Add padding to keep text away from the border */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center content horizontally */
+        justify-content: flex-start;
+        text-align: center;
+   }
+   .card p{
+    color:black;
+   }
+   .card,
+    .card * {
+        color: #111 !important;
+    }
+    .card-body {
+        padding: 0; 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center text and button horizontally */
+        justify-content: center;
+        padding: 20px 16px 16px 16px;
+        text-align: center;
+    }
+
+    .list-group {
+        margin: 0 -16px; 
+    }
+    .story-row {
+      display: flex;
+      align-items: center;
+    }
+    .story-row p {
+      margin: 0;
+      color: #333;
+      font-size: 1.1em;
+    }
+    .body-bg-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+    .card-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+        }
+        .card-img-top {
+            width: 100%;
+            height: 20px;      /* Most of the card is image */
+            object-fit: cover;  /* Fills the area, cropping if needed */
+            background: #181825;
+            padding: 0;
+            border-radius: 0;
+            display: block;
+            margin: 0 auto;      /* Center image horizontally */
+        }
+        .card-body {
+            flex: 1 1 auto;
+            width: 100%;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px 16px 16px 16px;
+            text-align: center;
+        }
+        .section h1,
+        h1.text-center.my-4 {
+            font-family: 'Bangers', cursive;
+            font-size: 2.5rem;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px; /* Increased from 20px to 40px */
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .card-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 24px;
+        }
+        .card-img-top {
+            width: 100%;
+            height: 180px;           /* Adjust as needed */
+            object-fit: contain;     /* Show the whole character, no cropping */
+            border-radius: 0;
+            padding: 8px;            /* Adds a frame effect */
+            display: block;
+            margin: 0 auto;      /* Center image horizontally */
+        }
+      .card-body .card-text,
+      .card-body .card-text a {
+          color: #00bfff !important; /* Blue before hover */
+          transition: color 0.2s, text-shadow 0.2s;
+      }
+
+      .card-body .card-text:hover,
+      .card-body .card-text:hover a {
+          color: #c77dff !important; /* Purple on hover */
+          text-shadow: 0 0 8px #c77dff, 0 0 16px #fff;
+          transition: color 0.2s, text-shadow 0.2s;
+      }
+
+      .card-body .card-text a {
+          color: inherit;
+          text-decoration: none;
+      }
+      .banner-box {
+          display: inline-block;
+          padding: 30px 40px;
+          margin: 40px auto;
+          position: relative;
+          background-color: #111;
+          box-shadow: 0 0 20px rgba(255,255,255,0.3);
+          border: 6px solid transparent;
+          border-radius: 12px;
+          background-image:
+            linear-gradient(#111, #111), 
+            linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet, red); /* animated border */
+          background-origin: border-box;
+          background-clip: padding-box, border-box;
+          background-size: 300% 300%;
+          animation: borderFlow 5s linear infinite;
+        }   
+
+    .characters-section {
+      padding: 60px 0 80px 0;   
+      margin: 40px auto;
+      max-width: 1200px;
+    }
+
+    .character-grid {
+      display: grid;
+      gap: 10px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      border-radius: 18px;
+      border: 2px solid #00ffe7;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center content horizontally */
+      justify-content: flex-start;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.04);
+      box-shadow: 0 8px 32px 0 #00ffe7, 0 0 32px #ff00cc;
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;      /* Center image horizontally */
+    }
+
+    .card-body {
+      padding: 24px 12px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center text and button horizontally */
+      justify-content: center;
+      padding: 20px 16px 16px 16px;
+      text-align: center;
+    }
+
+    .card-text a {
+      display: inline-block;
+      padding: 10px 28px;
+      color: #181825;
+      font-family: 'Press Start 2P', 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 8px #00ffe7;
+      transition: background 0.2s, color 0.2s;
+    }
+    .card-text a:hover {
+      background: #fff;
+      color: #ff00cc;
+      box-shadow: 0 4px 16px #ff00cc;
+    }
+
+    /* Clean, modern card style */
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.18s, box-shadow 0.18s;
+  text-align: center;
+  color: #222 !important;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  width: 240px;
+  height: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: flex-start;
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+}
+.card-img-top {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  background: #f8f8f8;
+  display: block;
+  margin: 0 auto;      /* Center image horizontally */
+}
+.card-body {
+  flex: 1;
+  padding: 20px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center text and button horizontally */
+  text-align: center;
+}
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+}
+.card-text a {
+  display: inline-block;
+  padding: 8px 22px;
+  background: #007bff;
+  color: #fff !important;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+.card-text a:hover {
+  background: #0056b3;
+}
+
+    /* Responsive for mobile */
+    @media (max-width: 900px) {
+      .character-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .characters-section {
+        padding: 32px 0 40px 0;
+      }
+    }
+
+    .card-container {
+  display: flex;
+  gap: 16px; /* space between cards, optional */
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 16px;
+  flex: 1 1 0; /* optional: makes cards grow/shrink equally */
+}
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.card-left {
+  align-self: flex-start;
+}
+.card-center {
+  align-self: center;
+}
+.card-right {
+  align-self: flex-end;
+}
+  </style>
+</head>
+<body>
+    <video autoplay muted loop playsinline class="body-bg-video">
+        <source src="torii-gate-forest-moewalls-com.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="main-container">
+        <img src = "Screenshot 2025-06-19 103614.png">
+        <hr>
+    <section class="characters-section">
+  <h1 style=" font-family: 'Lucidity';">CHARACTERS</h1>
+  <div class="card-row">
+    <div class="card card-left">
+      <a href="Solaris.html"><img src="download (3).png" class="card-img-top" alt="Character 1">
+      <div class="card-body">
+        <div class="card-title" style="font-family: Lucidity;">SOLARIS</div>
+      </div>
+      </a>
+    </div>
+    <div class="card card-center">
+      <a href="Voraqua.html"><img src="download (4).png" class="card-img-top" alt="Character 2">
+      <div class="card-body">
+        <div class="card-title" style="font-family: Lucidity;">VORAQUA</div>
+      </div>
+      </a>
+    </div>
+    <div class="card card-right">
+  <a href="Golvaris.html">
+    <img src="download (5).png" class="card-img-top" alt="Character 3">
+    <div class="card-body">
+      <div class="card-title" style="font-family: Lucidity;">GOLVARIS</div>
+    </div>
+  </a>
+</div>
+  </div>
+</section>
+<h1 style="font-family: 'Lucidity';">Eukaryotic</h1>
+<section style="display: flex; align-items: center;">
+  <div style="flex: 1; display: flex; justify-content: center;">
+    <img src="download (7).png" alt="Eukaryotic Cell" style="max-width: 100%; height: auto;">
+  </div>
+  <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+    <p style="font-size: 1.2em; color: #333; text-align: center; max-width: 600px;">
+      Eukaryotic cells are complex, organized cells defined by a true, membrane-bound nucleus containing linear DNA. They have numerous membrane-bound organelles that perform specific functions: mitochondria generate energy (ATP), the endoplasmic reticulum (ER) produces proteins and lipids, the Golgi apparatus modifies and packages molecules, and lysosomes and peroxisomes handle waste processing and detoxification. Plant cells also feature chloroplasts for photosynthesis, a rigid cell wall for structure, and a large central vacuole for storage and pressure maintenance.
+  </div>
+<br><br>
+</section>
+<section style="display: flex; align-items: center;">
+  <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+    <p style="font-size: 1.2em; color: #333; text-align: center; max-width: 600px;">
+     Eukaryotic cells are defined by their complex internal structure. A major feature is the nucleus, a membrane-bound sac containing linear DNA organized with proteins into chromosomes. Eukaryotic cells also have a cytoskeleton made of actin and tubulin filaments that shape the cell and assist in movement. They use specialized flagella (or undulipodia) with a unique "9+2" microtubule structure for locomotion. Their internal organization includes organelles like the endoplasmic reticulum for transport and production of lipids and proteins, Golgi bodies for packaging, mitochondria for energy production, and, in some cells, plastids for photosynthesis. Mitochondria and plastids even have their own DNA, reflecting their evolutionary origin from symbiotic bacteria. 
+  </div>
+  <div style="flex: 1; display: flex; justify-content: center;">
+    <img src="Screenshot 2025-06-20 143809.png" alt="Eukaryotic Cell" style="max-width: 100%; height: auto;">
+  </div>
+</section>
+<br><br>
+<section style="display: flex; align-items: center;">
+  <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+    <p style="font-size: 1.2em; color: #333; text-align: center; max-width: 600px;">
+     Characteristics
+     <br>
+ Nutrition: Plant cells are autotrophic, meaning they produce their own food through photosynthesis using sunlight.
+ <br>
+ <br>
+ Metabolism: They convert glucose into usable energy through cellular processes.
+ <br>
+ <br>
+ Homeostasis: Vacuoles regulate water and nutrients, while chloroplasts provide energy to keep the cell balanced.
+ <br>
+ <br>
+ Reproduction: Plant cells can reproduce asexually by mitosis or sexually through meiosis.
+ <br>
+ <br>
+ Environment: They thrive in sunlit areas, on land or in water, where light is available for photosynthesis.
+
+  </div>
+  <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+    <p style="font-size: 1.2em; color: #333; text-align: center; max-width: 600px;">
+     Identified Organelles and Descriptions
+     <br>
+     <br>
+Nucleus: Stores DNA and controls the cell's activities.
+<br>
+<br>
+
+Mitochondria: Converts sugar into energy the cell can use.
+<br>
+<br>
+Ribosomes: Build proteins; found floating in the cytoplasm or on the rough ER.
+<br>
+<br>
+Rough Endoplasmic Reticulum (ER): Has ribosomes; helps make and transport proteins.
+<br>
+<br>
+Smooth Endoplasmic Reticulum (ER): Makes fats and detoxifies harmful substances.
+<br>
+<br>
+Golgi Apparatus: Sorts, packages, and delivers proteins and other materials.
+<br>
+<br>
+Chloroplasts: Capture sunlight and turn it into food through photosynthesis.
+<br><br>
+
+Lysosomes: Break down waste and damaged parts inside the cell.
+<br>
+<br>
+Plasma Membrane: Controls what enters and exits the cell.
+
+  </div>
+</section>
+</div>
+</body>
+</html>

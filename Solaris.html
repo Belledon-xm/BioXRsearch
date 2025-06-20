@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voraqua</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif; 
+        color: white; 
+    }
+    .main-container {
+        width: 60vw;          
+        max-width: 1200px;    
+        margin: 40px auto;    
+        background: rgba(255,255,255,0.65); /* More opaque for better readability */
+        padding: 32px;       
+        box-sizing: border-box;
+        border-radius: 12px;  
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08); 
+        backdrop-filter: blur(8px); /* Adds a blur effect to the background */
+        -webkit-backdrop-filter: blur(8px); /* For Safari support */
+    }
+    @font-face {
+        font-family: 'Lucidity';
+        src: url('fonts/Lucidity.ttf') format('truetype');
+    }
+
+    .main-container h1 {
+        font-family: 'Lucidty';
+        text-align: center;
+        margin-top: 0;
+        font-size: 3em;
+        color: black;
+    }
+    .main-container hr {
+        border: 2px solid black;
+        height: 1px;
+        background: black;
+        margin: 20px 0;
+    }
+    .main-container p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: black; 
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+        }
+    .grid h2 {
+        grid-column: span 6;
+        font-size: 1.5em;
+        color: #333;
+    }
+    .card {
+        border: 2px solid #333;      
+        border-radius: 10px;         
+        background: rgba(255,255,255,0.3);          
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10); 
+        overflow: hidden;            
+        padding: 16px; /* Add padding to keep text away from the border */
+   }
+   .card p{
+    color:black;
+   }
+   .card,
+    .card * {
+        color: #111 !important;
+    }
+    .card-body {
+        padding: 0; 
+    }
+
+    .list-group {
+        margin: 0 -16px; 
+    }
+    .story-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .story-row p {
+      margin: 0;
+      color: #333;
+      font-size: 1.1em;
+    }
+    .body-bg-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+        .overlay {
+      width: 100%;
+      margin: 5% auto;
+    }
+  </style>
+</head>
+<body>
+    <a href="Index.html" style="position: absolute; top: 20px; left: 20px; font-size: 2rem; color: inherit; text-decoration: none;">
+        <i class="fas fa-home"></i>
+    </a>
+    
+    <video autoplay muted loop playsinline class="body-bg-video">
+        <source src="pink-nebula-moewalls-com.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="main-container">
+        <h1>SOLARIS</h1>
+        <p>Made by Martija, Gabiran, and Aganon</p>
+        <hr>
+     <div class="grid text-center">
+        <div class="g-col-6" style="grid-column: 1 / 7; text-align: left;">
+            <h2>Introduction</h2>
+            <p style="color: black ; text-align: left;">Solaris is the guardian of light and energy inside the plant cell. His mission is to absorb sunlight and turn it into glucose, the fuel for life. Without him, the cell would have no energy to grow, heal, or survive.
+
+            </p>
+        </div>
+        <div class="g-col-6" style="grid-column: 10 / 13; justify-self: end;">
+            <div class="card" style="width: 18rem;">
+                <img src="download (3).png" class="card-img-top" alt="Varaqua Image">
+                <hr>
+                <div class="card-body">
+                    <h5 class="card-title">SOLARIS</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+         <div class="overlay">
+    <h1>Chloroplasts</h1>
+    <p>
+     Chloroplasts are green, energy-making organelles found only in plant and algal cells. They use sunlight, water, and carbon dioxide to produce glucose, which plants use for energy. They also release oxygen as a byproduct of photosynthesis.
+
+    </p>
+    <br>
+    <br>
+    <p>Chloroplasts are oval-shaped and have two membranes. Inside, they contain thylakoids stacked into grana, where chlorophyll captures sunlight. The surrounding fluid, called the stroma, holds enzymes needed for making glucose. They can move within the cell to adjust to light, a process called photorelocation.
+</p>
+    <p>Functions in Maintaining Homeostasis
+<br>
+Energy Production: Provide glucose for cell growth, repair, and survival.
+
+<br>
+Oxygen Release: Produce oxygen, essential for both plants and animals.<br>
+Carbon Dioxide Reduction: Help regulate atmospheric gases by absorbing carbon dioxide.<br>
+Stress Response: Adjust activity under harsh conditions to protect the cell.
+
+</div>
+        
+        <br>
+        <br>
+        <div class="overlay">
+            <h1>Superpower</h1>
+        </div>
+        <section style="display: flex; align-items: center;">
+            <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+                <p style="font-size: 1.2em; color: #333; text-align: center; max-width: 600px;">
+                 Photosynthetic Synthesis — Solaris can capture sunlight and produce unlimited energy in the form of glucose. He also releases oxygen, sustaining life inside and outside the cell.
+            </div>
+            <div style="flex: 1; display: flex; justify-content: center;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwtxpD6gCXaIHGahI6ErjSm5uJFBHcWLMDmA&ss" alt="Eukaryotic Cell" style="max-width: 100%; height: 200px;">
+            </div>
+        </section> 
+        <br>
+        <br>
+        <br>
+        <div class="overlay">
+    <h1>Weakness</h1>
+    <p>Weaknesses Include:
+<br>
+Lack of Sunlight: Without light, Solaris loses his power and energy production stops.
+<br>
+<br>
+Environmental Stress: High heat, pollution, or lack of nutrients can weaken him.
+<br>
+<br>
+Chlorophyll Damage: If his pigments are damaged, he cannot absorb sunlight efficiently.
+        <br>
+        <br>
+        <br>
+        <div class="overlay">
+            <h1>References</h1>
+            <p>National Human Genome Research Institute. (n.d.). Vacuole. Genome.gov. https://www.genome.gov/genetics-glossary/Vacuole 
+
+ 
+<br><br>
+Biology Online. (n.d.). Photosynthesis in plants. https://www.biologyonline.com/
+ 
+<br><br>
+Duke, S. O. (2018). Plant cell biology: Chloroplast function. National Library of Medicine.
+https://www.ncbi.nlm.nih.gov/
+ 
+<br><br>
+Jackson, M., & Green, D. (2020). Cell biology: Chloroplasts in photosynthesis.
+Encyclopedia Britannica. https://www.britannica.com/
+ <br><br>
+
+ Khan Academy. (n.d.). Chloroplasts and photosynthesis.
+https://www.khanacademy.org/science/biology<br><br>
+ 
+
+Mooney, H. A., & Klemens, D. P. (2017). Chloroplasts and photosynthesis in energy
+production. Encyclopedia of Plant Science. https://www.encyclopedia.com
+
+<br><br>
+
+ National Aeronautics and Space Administration. (2020). The role of chloroplasts in
+photosynthesis. https://www.nasa.gov/
+ <br><br>
+
+National Institutes of Health. (2019). Photosynthesis and the role of chloroplasts in energy
+production. PubMed Central. https://www.ncbi.nlm.nih.gov/ <br><br>
+
+ PubMed Central. (2018). Chloroplasts: Functions and roles in energy production.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5998202/<br><br>
+ 
+
+The Royal Society of Biology. (2018). Photosynthesis: A plant’s power to grow.
+https://www.rsb.org.uk/<br><br>
+ 
+
+University of California, Berkeley. (2019). Chloroplasts and the process of photosynthesis.
+https://www.berkeley.edu/
+<br><br>
+World Health Organization. (2019). The importance of oxygen production by plants.
+https://www.who.int/<br><br>
+ 
+
+California State University, Long Beach. (2021). Plant cell structure and the role of
+chloroplasts. https://www.csulb.edu/<br><br>
+ 
+ </p>
+        </div>
+    </div>
+</body>
+</html>
